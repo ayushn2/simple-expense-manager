@@ -1,0 +1,107 @@
+.bg{
+    margin-top: 0px;
+    height:300px;
+}
+body{
+    margin: 0px 0px 0px 0px;
+}
+.top{
+    background-image:linear-gradient(rgba(0, 0, 0,0.35),rgba(0,0,0,0.35)),url(images/back.png);
+    height:250px;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    
+}
+.inputs{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    background-color: rgb(246, 246, 246);
+    height:75px;
+}
+.heading{
+    text-align:center;
+    font-weight: 100;
+    font-size:20px;
+    font-family: Roboto, Arial;
+    margin-bottom: 13px;
+    padding-top: 5px;
+}
+.budget-value{
+    text-align:center;
+    font-weight:200;
+    font-size:50px;
+    font-family: Roboto, Arial;
+}
+.check-button{
+    border:none;
+    background: none;
+    width:50px;
+    padding: 10px 10px 10px 10px;
+    background-color:red;
+}
+.check-button:hover{
+    cursor:pointer;
+    /* transition: margin-bottom 0.2s; */
+}
+
+.income{
+    /* padding:15px 0px 15px 0px; */
+    width:350px;
+    background-color:#28B9B5 ;
+    position:relative;
+    height: 45px;
+    margin-top:50px;
+}
+.expense{
+    /* padding:15px 0px 15px 0px; */
+    margin-top:10px;
+    width:350px;
+    background-color: #FF5049;
+    position:relative;
+    height:45px;
+}
+.income-value{
+    color:white;
+    font-family:Roboto,Arial;
+    position:absolute;
+    right:50px;
+    top:15px;
+}
+.expense-value{
+    right:50px;
+    top:15px;
+
+    color:white;
+    font-family:Roboto,Arial;
+    position:absolute;
+
+}
+.budget-income,.budget-expense{
+    /* margin-left:10px;
+    margin-right:100px; */
+    position:absolute;
+    color:rgb(47, 36, 36);
+    font-family:Roboto,Arial;
+    font-size: 13px;
+    left:10px;
+    top:15px;
+}
+.grid-left{
+    margin-left:150px;
+    font-family:Roboto,Arial;
+    font-size:18px;
+}
+.grid-right{
+    margin-left:25px;
+    font-family:Roboto,Arial;
+    
+    font-size:18px;
+}
+.js-income-description,.js-expense-description{
+    width:500px;
+    position:relative;
+}
+ 

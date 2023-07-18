@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy</title>
+    <link rel="stylesheet" href="simple-expense.css">
+</head>
+<body>
+    <div class="top">
+        <div class="heading">
+            Available budget in <span>May</span> 2023
+        </div>
+        <div class="budget-value"></div>
+        <div style="display:flex;
+        justify-content: center;">
+
+            <div class="income">
+                <span class="budget-income">INCOME</span>
+                <span class="income-value">+0.00</span>
+            </div>
+
+        </div>
+        <div style="display:flex;
+        justify-content: center;">
+
+            <div class="expense">
+                <span class="budget-expense">EXPENSES</span>
+                <span class="expense-value">-0.00</span>
+            </div>
+
+        </div>
+    </div>
+    
+        <div class="inputs">
+                <select style="
+                padding:15px 10px 15px 10px;
+                border:none;
+                box-shadow:-1px -1px 1px rgba(0,0,0,0.3);"
+                class="decidingElement">
+                    <option value="inc" selected>+</option>
+                    <option value="dec">-</option>
+                </select>
+
+                <input style="margin:0px 15px 0px 15px; 
+                padding:15px 240px 15px 5px;
+                border:none;
+                box-shadow:-1px -1px 1px rgba(0,0,0,0.3)" type="text" 
+                class="description-input"
+                placeholder="Add Description">
+
+                <input style="padding:15px 0px 15px 5px;
+                width:100px;
+                border:none;
+                box-shadow:-1px -1px 1px rgba(0,0,0,0.3)" 
+                class="value" type="number" placeholder="Value">
+
+                <div
+                onclick="addDetail();"
+                class="check-button">
+                  <span style="width:50px;">&#9745</span>    
+                <!-- <img style="width:35px;" src="images/check2.png" alt=""> -->
+                </div>
+            
+        </div>
+        <div style="display:grid;
+        grid-template-columns:1fr 1fr;
+        margin-top:65px;">
+
+            <div class="grid-left">
+                <div style="color:#28B9B5;">INCOME</div>
+                <div class="js-income-description"></div>
+            </div>
+
+            <div class="grid-right">
+                <div style="color:#FF5049;">EXPENSES</div>
+                <div class="js-expense-description"></div>
+            </div>
+
+        </div>
+
+    <script src="simple-expense.js"></script>
+</body>
+</html>
