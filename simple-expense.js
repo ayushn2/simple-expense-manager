@@ -1,8 +1,10 @@
+let month=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
 let incomeDetails=[{
-    description:'Freelancing-> making websites',
+    description:'Income-1',
     cost:289
 },{
-    description:'Internship at OpenAI',
+    description:'Income-2',
     cost:890
 }];
 let expenseDetails=[{
@@ -18,6 +20,13 @@ let totalCost={
     income:0,
     expense:0
 };
+
+const currentDate = new Date();
+const currentMonth = currentDate.getMonth();
+const liveMonth = currentMonth;
+
+document.querySelector(".monthName").innerHTML=`${month[liveMonth]}`
+
 renderIncomeList();
 renderExpenseList();
 
@@ -33,21 +42,21 @@ function renderIncomeList(){
         const html=`<div style="position:relative;"><p style="box-shadow: 0px 1px 1px rgba(0,0,0,0.1);">${description}</p><span style="position:absolute;
         right:5px;
         bottom:0px;
-        color:#28B9B5 ;">+${cost}.00</span></div>`;
+        color:#28B9B5 ;">+${cost}</span></div>`;
         
         // document.querySelector('.')
         updateList=updateList+html;
         console.log(updateList);
     }
 
-    document.querySelector('.income-value').innerHTML=`+${totalIncomeCost}.00`;
+    document.querySelector('.income-value').innerHTML=`+${totalIncomeCost}`;
     totalCost.income=totalIncomeCost;
     let grandTotal=totalCost.income+totalCost.expense;
     
     if(grandTotal>0)
-    document.querySelector('.budget-value').innerHTML=`+ ${grandTotal}.00`;
+    document.querySelector('.budget-value').innerHTML=`+ ${grandTotal}`;
     else
-    document.querySelector('.budget-value').innerHTML=`- ${grandTotal}.00`;
+    document.querySelector('.budget-value').innerHTML=`- ${grandTotal}`;
     
     console.log(totalIncomeCost);
     document.querySelector('.js-income-description').innerHTML=updateList;
@@ -68,19 +77,19 @@ function renderExpenseList(){
         const html=`<div style="position:relative;"><p style="box-shadow: 0px 1px 1px rgba(0,0,0,0.1);">${description}</p><span style="position:absolute;
         right:5px;
         bottom:0px;
-        color:#FF5049">${cost}.00</span></div>`;
+        color:#FF5049">${cost}</span></div>`;
         updateList=updateList+html;
     }
 
-    document.querySelector('.expense-value').innerHTML=`${totalExpenseCost}.00`;
+    document.querySelector('.expense-value').innerHTML=`${totalExpenseCost}`;
     totalCost.expense=totalExpenseCost;
     console.log(totalExpenseCost);
     let grandTotal=totalCost.income+totalCost.expense;
 
     if(grandTotal>0)
-    document.querySelector('.budget-value').innerHTML=`+ ${Math.abs(grandTotal)}.00`;
+    document.querySelector('.budget-value').innerHTML=`+ ${Math.abs(grandTotal)}`;
     else
-    document.querySelector('.budget-value').innerHTML=`- ${Math.abs(grandTotal)}.00`;
+    document.querySelector('.budget-value').innerHTML=`- ${Math.abs(grandTotal)}`;
     document.querySelector('.js-expense-description').innerHTML=updateList;
 }
 
@@ -115,7 +124,6 @@ function addDetail(){
     }
     
     else{
-        alert('Apni maa mat chuda');
+        alert('Check your entries!!');
     }
 }
-// console.log(document.querySelector('.decidingElement').value);
